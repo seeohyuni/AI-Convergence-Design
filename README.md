@@ -23,21 +23,20 @@
 ### 5. 최종 파라미터 
 - 파라미터 설정할 때 중요하게 여긴 부분:
   학습 속도, 메모리 오류, 과적합, 커널 다운, 데이터 사용 비율
-   
-model = lgb.LGBMClassifier(
-    objective='binary',  # 이진분류
-    learning_rate=0.1,  # 학습 속도 
-    num_leaves=780,  # 최대 리프 노드의 수
-    max_depth=-1,  # 트리의 최대 깊이를 제한 
-    min_data_in_leaf=10,  # 리프 노드가 갖는 최소 데이터 수를 지정
-    feature_fraction=1.0,  # 각 부스팅 반복에서 사용할 특성(feature)의 비율을 지정
-    bagging_fraction=1.0,  # 각 부스팅 반복에서 사용할 데이터 샘플의 비율을 지정
-    bagging_freq=1,   # bagging을 적용할 빈도를 지정
-    boosting_type='gbdt',   # 부스팅 알고리즘의 종류를 지정
-    max_bin=780,   # 특징을 분할할 때 사용할 최대 bin의 수를 지정
-    subsample=0.9,         # 각 트리 학습에 사용하는 데이터 비율
-    colsample_bytree=0.9   # 각 트리 학습에 사용하는 특성 비율
-)
+
+objective='binary',  # 이진분류
+learning_rate=0.1,  # 학습 속도 
+num_leaves=780,  # 최대 리프 노드의 수
+max_depth=-1,  # 트리의 최대 깊이를 제한 
+min_data_in_leaf=10,  # 리프 노드가 갖는 최소 데이터 수를 지정
+feature_fraction=1.0,  # 각 부스팅 반복에서 사용할 특성(feature)의 비율을 지정
+bagging_fraction=1.0,  # 각 부스팅 반복에서 사용할 데이터 샘플의 비율을 지정
+bagging_freq=1,   # bagging을 적용할 빈도를 지정
+boosting_type='gbdt',   # 부스팅 알고리즘의 종류를 지정
+max_bin=780,   # 특징을 분할할 때 사용할 최대 bin의 수를 지정
+subsample=0.9,         # 각 트리 학습에 사용하는 데이터 비율
+colsample_bytree=0.9   # 각 트리 학습에 사용하는 특성 비율
+
 
 ### 6. 점수 
 - 교수님께서 주신 코드 최종 점수: 0.7356936284
